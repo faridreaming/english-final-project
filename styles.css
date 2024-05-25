@@ -27,11 +27,15 @@
     --color-s-1-75: #6dc5d1be;
     --color-s-1-50: #6dc5d180;
     --color-s-1-25: #6dc5d140;
-  }
+}
 h1 {
     right: 10px;
 }
 /* General styles */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     line-height: 1.6;
     margin: 0;
@@ -41,32 +45,46 @@ body {
 }
 
 #home {
-        background-image: url("Picture\ Properties/learning english.jpg");
-        background-size: cover;
-        background-position:center;
-        position: relative; 
-        height: 600px;
-        top: -19px;
-      }
+    background-image: url("Picture\ Properties/learning english.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 600px;
+    top: -20px;
+    scroll-margin-block-start: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero > * {
+    color: #fff;
+    margin-left: 2rem;
+}
+.hero h2,
+.hero p {
+    text-shadow: 0 0 4px black;
+}
+.hero p {
+    mix-blend-mode: difference;
+}
 
 body,
 input,
 textarea,
 button {
-  font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 header {
-
     color: #fff;
-    padding: 1px 10%;
     text-align: center;
     justify-content: space-between;
     align-items: center;
-    background :rgb(59, 125, 247);
-    display:grid;
+    background: rgb(59, 125, 247);
+    display: grid;
     z-index: 1000;
-    position:static;
+    position: sticky;
     width: 100%;
     top: 0;
     right: 0;
@@ -74,6 +92,11 @@ header {
 
 header h1 {
     place-self: start;
+    margin-left: 2rem;
+}
+
+nav {
+    margin-left: 2rem;
 }
 
 nav ul {
@@ -85,7 +108,7 @@ nav ul li {
     display: inline;
     margin: 0.1rem;
     margin-right: 5rem;
-  }
+}
 
 nav ul li a {
     color: #fff;
@@ -97,7 +120,7 @@ nav ul li a {
     margin: 2rem auto;
     max-width: 800px;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease; /* Animasi bayangan kotak */
 }
 
@@ -129,7 +152,7 @@ nav ul li a:hover {
 }
 
 .section:hover {
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 footer:hover {
