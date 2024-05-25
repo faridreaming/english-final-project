@@ -1,0 +1,149 @@
+:root {
+    --basic-border-radius: 0.25rem;
+    --basic-transition: 0.25s;
+    --basic-border-style: 0.1rem solid var(--color-4);
+    --medium-border-radius: 0.5rem;
+    --color-dark: #1a1a1a;
+    --color-dark-75: #1a1a1abe;
+    --color-dark-50: #1a1a1a80;
+    --color-dark-25: #1a1a1a40;
+    --color-1: #dd761c;
+    --color-1-75: #dd761cbe;
+    --color-1-50: #dd761c80;
+    --color-1-25: #dd761c40;
+    --color-2: #feb941;
+    --color-2-75: #feb941be;
+    --color-2-50: #feb94180;
+    --color-2-25: #feb94140;
+    --color-3: #fde49e;
+    --color-3-75: #fde49ebe;
+    --color-3-50: #fde49e80;
+    --color-3-25: #fde49e40;
+    --color-4: #f7f7f7;
+    --color-4-75: #f7f7f7be;
+    --color-4-50: #f7f7f780;
+    --color-4-25: #f7f7f740;
+    --color-s-1: #6dc5d1;
+    --color-s-1-75: #6dc5d1be;
+    --color-s-1-50: #6dc5d180;
+    --color-s-1-25: #6dc5d140;
+  }
+h1 {
+    right: 10px;
+}
+/* General styles */
+body {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    transition: background-color 0.5s ease; /* Animasi perubahan warna latar */
+}
+
+#home {
+        background-image: url("Picture\ Properties/learning english.jpg");
+        background-size: cover;
+        background-position:center;
+        position: relative; 
+        height: 600px;
+        top: -19px;
+      }
+
+body,
+input,
+textarea,
+button {
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+
+    color: #fff;
+    padding: 1px 10%;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    background :rgb(59, 125, 247);
+    display:grid;
+    z-index: 1000;
+    position:static;
+    width: 100%;
+    top: 0;
+    right: 0;
+}
+
+header h1 {
+    place-self: start;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0.1rem;
+    margin-right: 5rem;
+  }
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.section {
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease; /* Animasi bayangan kotak */
+}
+
+h2 {
+    color: #333;
+}
+
+.lesson {
+    margin-bottom: 1rem;
+}
+
+.lesson p {
+    margin: 0.5rem 0;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: bottom;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Animasi saat hover */
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.section:hover {
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+footer:hover {
+    background-color: #555;
+}
+
+/* Animasi masuk */
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease, transform 1s ease;
+}
