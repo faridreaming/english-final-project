@@ -1,4 +1,5 @@
 :root {
+    --header-height: 60px; /* Sesuaikan dengan tinggi header Anda */
     --basic-border-radius: 0.25rem;
     --basic-transition: 0.25s;
     --basic-border-style: 0.1rem solid var(--color-4);
@@ -28,10 +29,7 @@
     --color-s-1-50: #6dc5d180;
     --color-s-1-25: #6dc5d140;
 }
-h1 {
-    right: 10px;
-}
-/* General styles */
+
 html {
     scroll-behavior: smooth;
 }
@@ -41,39 +39,47 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    transition: background-color 0.5s ease; /* Animasi perubahan warna latar */
+    transition: background-color 0.5s ease;
 }
 
 #home {
-    background-image: url("Picture\ Properties/learning english.jpg");
+    background-image: url("Picture Properties/learning english.jpg");
     background-size: cover;
     background-position: center;
     position: relative;
     height: 600px;
     top: -20px;
-    scroll-margin-block-start: 20rem;
+    scroll-margin-top: var(--header-height); /* Menambahkan margin untuk memastikan konten tidak tertutupi header */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
 }
 
-.hero > * {
+.hero {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
     color: #fff;
-    margin-left: 2rem;
-}
-.hero h2,
-.hero p {
     text-shadow: 0 0 4px black;
 }
+
 .hero p {
-    mix-blend-mode: difference;
+    margin-bottom: 10px;
+    max-width: 800px;
 }
 
 body,
 input,
 textarea,
 button {
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins", Arial;
 }
 
 header {
@@ -82,16 +88,18 @@ header {
     justify-content: space-between;
     align-items: center;
     background: rgb(59, 125, 247);
-    display: grid;
+    display: flex;
     z-index: 1000;
     position: sticky;
     width: 100%;
     top: 0;
     right: 0;
+    padding: 1rem 2rem;
+    height: var(--header-height);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 header h1 {
-    place-self: start;
     margin-left: 2rem;
 }
 
@@ -121,7 +129,16 @@ nav ul li a {
     max-width: 800px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease; /* Animasi bayangan kotak */
+    transition: box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    scroll-margin-top: var(--header-height); /* Menambahkan margin untuk memastikan konten tidak tertutupi header */
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
 h2 {
@@ -137,16 +154,13 @@ h2 {
 }
 
 footer {
-    background-color: #333;
+    background-color: rgb(59, 125, 247);
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: bottom;
     width: 100%;
-    bottom: 0;
 }
 
-/* Animasi saat hover */
 nav ul li a:hover {
     text-decoration: underline;
 }
@@ -157,16 +171,4 @@ nav ul li a:hover {
 
 footer:hover {
     background-color: #555;
-}
-
-/* Animasi masuk */
-.section {
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.section.visible {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 1s ease, transform 1s ease;
 }
