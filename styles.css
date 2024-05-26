@@ -28,6 +28,11 @@
     --color-s-1-75: #6dc5d1be;
     --color-s-1-50: #6dc5d180;
     --color-s-1-25: #6dc5d140;
+    --text-color: #fff;
+    --bg-color: #1b1f24;
+    --second-bg-color: #22282f;
+    --main-color: #fa5c01;
+    --other-color: #ffffff;
 }
 
 html {
@@ -38,8 +43,14 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #cdcdff;
     transition: background-color 0.5s ease;
+}
+
+.logo {
+    font-size: 34px;
+    color: var(--text-color);
+    font-weight: 600;
 }
 
 #home {
@@ -123,6 +134,10 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: var(--p-font);
+    font-weight: 500;
+    color: var(--other-color);
+    transition: all 0.5s ease;
 }
 
 .section {
@@ -142,12 +157,23 @@ nav ul li a {
     transform: translateY(0);
     transition: opacity 1s ease, transform 1s ease;
     width: 1000px;
+    text-align: center;
+    background-color: #a4a4fd;
+    border-radius: 28px;
+    box-shadow: 0 0 5px var(--main-color);
+}
+
+.section.visible:hover {
+    border: 1px solid var(--main-color);
+    transform: translateY(-5px) scale(1.03);
 }
 
 .section.visible .lesson {
     padding-top: 2rem;
     position: relative;
     border: 2px solid ;
+    border-radius: 28px;
+    background-color: white;
   }
   
 .section.visible .lesson h3 {
@@ -188,6 +214,11 @@ h2 {
     border-color: black;
 }
 
+.lesson:hover {
+    border: 1px solid var(--main-color);
+    transform: translateY(-5px) scale(1.03);
+}
+
 footer {
     background-color: rgb(253, 114, 0);
     color: #fff;
@@ -197,7 +228,8 @@ footer {
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: var(--main-color);
+    text-shadow: 3px 3px 20px var(--main-color), -2px 1px 30px var(--text-color);
 }
 
 .section:hover {
