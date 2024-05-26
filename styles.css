@@ -94,9 +94,11 @@ header {
     width: 100%;
     top: 0;
     right: 0;
-    padding: 1rem 2rem;
+    bottom: 0;
+    padding: 0.2rem 2rem;
     height: var(--header-height);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-family: "Poppins", "Helvetica Neue", Helvetica, Arial;
 }
 
 header h1 {
@@ -126,7 +128,7 @@ nav ul li a {
 .section {
     padding: 2rem;
     margin: 2rem auto;
-    max-width: 800px;
+    max-width: 2000px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
@@ -139,6 +141,30 @@ nav ul li a {
     opacity: 1;
     transform: translateY(0);
     transition: opacity 1s ease, transform 1s ease;
+    width: 1000px;
+}
+
+.section.visible .lesson {
+    padding-top: 2rem;
+    position: relative;
+    border: 2px solid ;
+  }
+  
+.section.visible .lesson h3 {
+    background-color: #0beca1;
+    color: rgb(0, 0, 0);
+    top: -2px;
+    left: -2px;
+    font-weight: bold;
+    padding: 3px;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    width: 990px;
+    position: absolute;
+    z-index: 9999;
+    border: 2px solid ;
+    margin: 0;
+  
 }
 
 h2 {
@@ -146,15 +172,24 @@ h2 {
 }
 
 .lesson {
-    margin-bottom: 1rem;
+    border: 2px solid;
+    margin-bottom: 3rem;
+    border-radius: 5px 5px 0 0;
+    padding: 0;
+    border-color: black;
 }
 
 .lesson p {
-    margin: 0.5rem 0;
+    margin: 0.5rem 5px;
+}
+.lesson .bebas {
+    border: 1px solid;
+    border-radius: 5px 5px 0 0;
+    border-color: black;
 }
 
 footer {
-    background-color: rgb(59, 125, 247);
+    background-color: rgb(253, 114, 0);
     color: #fff;
     text-align: center;
     padding: 10px 0;
