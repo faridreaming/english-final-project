@@ -1,5 +1,6 @@
 :root {
-    --header-height: 60px; /* Sesuaikan dengan tinggi header Anda */
+    --header-height: 60px;
+    /* Sesuaikan dengan tinggi header Anda */
     --basic-border-radius: 0.25rem;
     --basic-transition: 0.25s;
     --basic-border-style: 0.1rem solid var(--color-4);
@@ -60,7 +61,8 @@ body {
     position: relative;
     height: 600px;
     top: -20px;
-    scroll-margin-top: var(--header-height); /* Menambahkan margin untuk memastikan konten tidak tertutupi header */
+    scroll-margin-top: var(--header-height);
+    /* Menambahkan margin untuk memastikan konten tidak tertutupi header */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -77,13 +79,24 @@ body {
     align-items: center;
     text-align: center;
     padding: 2rem;
-    color: #fff;
-    text-shadow: 0 0 4px black;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, #CDCDFF, transparent);
 }
 
 .hero p {
     margin-bottom: 10px;
-    max-width: 800px;
+    max-width: 1200px;
+    position: inherit;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 body,
@@ -106,18 +119,15 @@ header {
     top: 0;
     right: 0;
     bottom: 0;
-    padding: 0.2rem 2rem;
     height: var(--header-height);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding-block: 1rem;
     font-family: "Poppins", "Helvetica Neue", Helvetica, Arial;
 }
 
-header h1 {
-    margin-left: 2rem;
-}
 
-nav {
-    margin-left: 2rem;
+header h1 {
+    padding-left: 7rem;
 }
 
 nav ul {
@@ -143,20 +153,20 @@ nav ul li a {
 .section {
     padding: 2rem;
     margin: 2rem auto;
-    max-width: 2000px;
+    max-width: 1200px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
     opacity: 0;
     transform: translateY(20px);
-    scroll-margin-top: var(--header-height); /* Menambahkan margin untuk memastikan konten tidak tertutupi header */
+    scroll-margin-top: var(--header-height);
+    /* Menambahkan margin untuk memastikan konten tidak tertutupi header */
 }
 
 .section.visible {
     opacity: 1;
     transform: translateY(0);
     transition: opacity 1s ease, transform 1s ease;
-    width: 1000px;
     text-align: center;
     background-color: #a4a4fd;
     border-radius: 28px;
@@ -171,26 +181,25 @@ nav ul li a {
 .section.visible .lesson {
     padding-top: 2rem;
     position: relative;
-    border: 2px solid ;
+    border: 2px solid;
     border-radius: 28px;
     background-color: white;
-  }
-  
+}
+
 .section.visible .lesson h3 {
     background-color: #0beca1;
     color: rgb(0, 0, 0);
     top: -2px;
     left: -2px;
     font-weight: bold;
-    padding: 3px;
+    padding: 3px 0;
     border-radius: 5px 5px 0 0;
     text-align: center;
-    width: 990px;
     position: absolute;
+    width: 100%;
     z-index: 9999;
-    border: 2px solid ;
+    border: 2px solid;
     margin: 0;
-  
 }
 
 h2 {
@@ -208,6 +217,7 @@ h2 {
 .lesson p {
     margin: 0.5rem 5px;
 }
+
 .lesson .bebas {
     border: 1px solid;
     border-radius: 5px 5px 0 0;
@@ -238,4 +248,8 @@ nav ul li a:hover {
 
 footer:hover {
     background-color: #555;
+}
+
+.content-wrapper {
+    padding: 0 2rem;
 }
